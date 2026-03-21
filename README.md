@@ -1,5 +1,11 @@
-This is a simple web mp3 player. \
-It is from one of my favourite serials.  Easier for to explorer, play, download the content.\
-It can continues play, shuffle and select your self then continue.\
-Access anywhere while internet is there or download favourites play on your trip.\
-Have a greate fun and all the best~
+# Simple Web MP3 Player
+
+### This is a simple web mp3 player. 
+
+### Default content is from one of my favourite series.  Improved design, and easier for user to explorer, play and download.
+### It can run continously, shuffle or select yourself then continue.
+
+### You can play anything you like, by uploading required playlist, given below columns: Collection, Title, MP3_URL, save in a csv, then upload the file, That's it.
+
+### Access anywhere while internet is there or download favourites, play it offline.
+### Have a greate fun~
