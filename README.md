@@ -10,4 +10,4 @@
 ### Access anywhere while internet is there or download favourites, play it offline.
 ### Have a greate fun~
 
-#### Sample page is available: https://myplayer.k2u.io
+
