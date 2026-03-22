@@ -10,4 +10,6 @@
 ### Access anywhere while internet is there or download favourites, play it offline.
 ### Have a greate fun~
 
+#### Visit https://myplayer.k2u.io for a test content or upload your own csv with ,Collection, Titile, MP3_URL.  
+#### https URL works fine on both mobile explorer and desktop, but http URL may not work on mobile.
 
