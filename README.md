@@ -1,14 +1,14 @@
-# Simple Web MP3 Play
-### This is a simple web mp3 player. You can host it yourself locally.  Just put two files in a folder and open explorer to run.
+# Simple Web MP3 Player
 
-### Default content is from one of my favourite series.  Improved design, and easier for user to explorer, play and download.
-### It can run continously, shuffle or select yourself then continue.
+### This simple web mp3 player can host it by yourself.  Just put two files in a folder and open explorer to run.
 
-### You can play any mp3 by uploading csv file with columns: ,Collection, Title, MP3_URL, That's it.
+### A sample free audio book from LibriVox is for testing, mp3 url is parsed into mp3_urls.csv file with Collection, Title, MP3_URL. columns.
 
-### Access anywhere while internet is there or download for offline(will play on windows/mac default app not the index page; page only accept csv and play remote URL).
+### It can run continously, shuffle or select yourself then continue, speed and download also available.
+
+### You can play any mp3 by uploading csv file as required format, then go.
+
 ### Have a greate fun~
 
-#### Visit online version: https://myplayer.k2u.io for a test content or upload your own csv with ,Collection, Titile, MP3_URL.  
 #### https URL works fine on both mobile explorer and desktop, but http URL may not work on mobile.
 
