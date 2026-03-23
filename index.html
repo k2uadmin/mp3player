@@ -141,7 +141,7 @@ tr.current{background:#e6f7ff;}
         </div>
 
         <div class="playlist" id="playlistContent">
-            <div style="text-align:center;padding:20px;color:#999;">请加载CSV文件</div>
+            <div style="text-align:center;padding:20px;color:#999;">Load CSV file</div>
         </div>
 
         <div class="pagination" id="paginationControls" style="display:none;">
@@ -216,12 +216,12 @@ function loadDefaultCsv(){
     // 例：fetch('https://example.com/files/mp3_urls.csv')
     fetch('mp3_urls.csv')
         .then(resp=>{
-            if (!resp.ok) throw new Error('找不到 mp3_urls.csv');
+            if (!resp.ok) throw new Error('Cannot find mp3_urls.csv');
             return resp.text();
         })
         .then(txt=>parseCSV(txt))      // 直接走既有的 CSV 解析流程
         .catch(err=>{ 
-            console.warn('自動載入失敗，仍可手動點「加载 CSV」：', err);
+            console.warn('Autoload failed，Load manually：', err);
             // 若找不到預設檔案，保持原本的「請加載 CSV」訊息
         });
 }
@@ -233,12 +233,12 @@ function handleFileSelect(e){
     if(!file) return;
     const reader=new FileReader();
     reader.onload=ev=>parseCSV(ev.target.result);
-    reader.onerror=()=>alert('讀取檔案失敗');
+    reader.onerror=()=>alert('Reading failed');
     reader.readAsText(file,'UTF-8');
 }
 function parseCSV(txt){
     const lines=txt.split(/\r?\n/).filter(l=>l.trim()!=='');
-    if(lines.length<2){alert('CSV 必須至少有標題列和一筆資料');return;}
+    if(lines.length<2){alert('CSV must has one line header and one line record');return;}
     const header=parseCSVLine(lines[0]);
     const iColl=header.findIndex(h=>h.toLowerCase()==='collection');
     const iTitle=header.findIndex(h=>h.toLowerCase()==='title');
@@ -258,13 +258,13 @@ function parseCSV(txt){
             });
         }
     }
-    if(player.playlist.length===0){alert('未解析到有效歌曲');return;}
+    if(player.playlist.length===0){alert('No content');return;}
     player.currentIndex=-1;
     player.currentPage=1;
     renderPlaylist();
     renderPagination();
     updateNowPlaying();
-    console.log(`成功載入 ${player.playlist.length} 首歌曲`);
+    console.log(`Successfully Load ${player.playlist.length}`);
 }
 function parseCSVLine(line){
     const res=[];let cur='';let inQ=false;
@@ -282,7 +282,7 @@ function parseCSVLine(line){
    每頁 50 筆，表格一次只顯示 13 行 (捲動) */
 function renderPlaylist(){
     if(player.playlist.length===0){
-        el.playlistContent.innerHTML='<div style="text-align:center;padding:20px;color:#999;">请加载CSV文件</div>';
+        el.playlistContent.innerHTML='<div style="text-align:center;padding:20px;color:#999;">Load CSV file</div>';
         el.paginationControls.style.display='none';
         return;
     }
