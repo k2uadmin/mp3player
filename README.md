@@ -10,7 +10,7 @@
 
 ### Have a greate fun~
 
-#### Simple page: https://mygithub.k2u.io 
+#### Sample page: https://mygithub.k2u.io 
 
 #### https URL works fine on both mobile explorer and desktop, but http URL may not work on mobile.
 
